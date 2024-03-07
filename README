@@ -1,43 +1,53 @@
 	MY OCTAVE
 
-	Pentru a rezolva problema, am folosit un vector de matrici, in care 
+	Pentru acest proiect, am folosit un vector de matrici, in care 
 am pastrat adresele tuturor matricilor. Am folosit vectori suplimentari
 pentru a retine date despre matrici: suma elementelor si dimensiunile.
 De fiecare data cand este alocata o noua matrice, realoc tablourile
 pe o dimensiune mai mare.
-	Pentru operatia 'L' am alocat spatiu pentru o noua matrice si am pastrat
+
+	Pentru operatia 'L'(LOAD) am alocat spatiu pentru o noua matrice si am pastrat
 dimensiunile in vectorii pentru linii si coloane.
-	Pentru operatia 'D' am afisat dimensiunile matricei de la indexul
+
+	Pentru operatia 'D'(DIMENSIONS) am afisat dimensiunile matricei de la indexul
 citit(daca exista).
-	Pentru operatia 'P' am afisat matricea de la indexul citit(daca exista).
-	Pentru operatia 'C' am verificat daca se poate face redimensionarea. Am
+
+	Pentru operatia 'P'(PRINT) am afisat matricea de la indexul citit(daca exista).
+
+	Pentru operatia 'C'(CHANGE SIZE) am verificat daca se poate face redimensionarea. Am
 citit dimensiunile noii matrici si am alocat vectori pentru a citi indicii
 coloanelor si liniilor dupa care se face redimensionarea. De asemenea,
 am alocat o matrice noua in care sa fac redimensionarea. La final, aloc
 matricea pe dimensiunile noi, copiez noile valori in ea si eliberez 
 memoria alocata pentru operatie(cei doi vectori si matricea).
-	Pentru operatia 'M' am alocat spatiu in plus pentru o noua matrice, dupa
+
+	Pentru operatia 'M'(MULTIPLY) am alocat spatiu in plus pentru o noua matrice, dupa
 care am calculat produsul dintre cele doua matrici(daca este posibil) si am
 adaugat matricea noua la finalul listei de matrici.
-	Pentru operatia 'O' am calculat suma pentru fiecare matrice si am sortat
+
+	Pentru operatia 'O'(SORT) am calculat suma pentru fiecare matrice si am sortat
 matricile crescator dupa suma. De asemenea, in timp ce se face sortarea
 matricilor se schimba si vectorii pentru dimensiuni si cel de suma, pentru a
 pastra legatura dintre matrici si datele despre ele.
-	Pentru operatia 'T' am folosit o matrice auxiliara, in care am pus liniile
+
+	Pentru operatia 'T'(TRANSPOSE) am folosit o matrice auxiliara, in care am pus liniile
 si coloanele din matricea initiala in ordine inversa. Am realocat matricea
 pe noile dimensiuni, am copiat valorile in ea si am eliberat memoria auxiliara.
-	Pentru operatia 'R' am implementat algoritmul de ridicare la putere in
+
+	Pentru operatia 'R'(POWER) am implementat algoritmul de ridicare la putere in
 timp logaritmic, avand grija sa eliberez toata memoria auxilara alocata in
 timpul procesului. Algoritmul are complexitate logaritica pentru ca puterea
 se injumatateste mereu, pana ajunge la 1. In cazul in care puterea introdusa
 este egala cu 0, am calculat matricea identitate si am pus-o in locul matricei
 initiale.
-	Pentru operatia de tip 'F' am verificat prima data cate matrici exista:
+
+	Pentru operatia de tip 'F'(FREE) am verificat prima data cate matrici exista:
 daca este alocata o singura matrice, atunci eliberez toate resursele. Altfel,
 mut matricea de la indexul primit(impreuna cu vectorii de dimensiuni si de 
 suma) la finalul vectorului de matrici, si eliberez toata memoria asociata
 acelei matrici.
-	Pentru operatia de tip 'Q', verific cate matrici exista. In cazul in
+
+	Pentru operatia de tip 'Q'(QUIT), verific cate matrici exista. In cazul in
 nu exista matrici(nu au fost introduse sau au fost eliberate prin 'F'),
 ies direct din program. Altfel, eliberez toata memoria alocata.
 
